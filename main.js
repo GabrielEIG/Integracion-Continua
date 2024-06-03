@@ -1,8 +1,7 @@
 
-export const holaMundo = (text) =>{
+const holaMundo = () =>{
     
-    console.log("Hola mundo");
-
-    return true;
+    return "Hola mundo";
 }
 
+module.exports = holaMundo;
