@@ -1,0 +1,29 @@
+name: 'Hola Mndo'
+
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+  rund-on: ubuntu-latest
+    steps:
+    
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16.13.x
+          cache: npm
+            
+      - name: Install
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+
+        
